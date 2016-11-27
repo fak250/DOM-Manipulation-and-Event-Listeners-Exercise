@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+	<meta charset="UTF-8">
+
+	<title>DOM Manipulation and Jquery</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			var $counter = 0;
+
+			$('#left').on('click', function () {
+				$('#image').animate({
+					left: '-=100'
+				});
+				$counter++;
+				$('#score').text($counter);
+			});
+
+			$('#right').on('click', function () {
+				$('#image').animate({
+					left: '+=100'
+				});
+				$counter++;
+				$('#score').text($counter);
+			});
+
+			$('#up').on('click', function () {
+				$('#image').animate({
+					top: '-=100'
+				});
+				$counter++;
+				$('#score').text($counter);
+			});
+
+			$('#down').on('click', function () {
+				$('#image').animate({
+					top: '+=100'
+				});
+				$counter++;
+				$('#score').text($counter);
+			});
+
+
+
+		});
+	</script>
+
+	<header>
+		<h3>Get Farzan Home(avoiding the dogs)</h3>
+
+		<button id="left">Left</button>
+		<button id="right">Right</button>
+		<button id="up">Up</button>
+		<button id="down">Down</button>
+		<div id="score"><p>0</p></div>
+	</header>
+
+
+	<img src="Imgs/door.jpg" id="door">
+	<div id="image">
+		<img src="Imgs/smiley.jpg" id="smiley">
+	</div>
+	<div id="dog_image">
+	<img src="Imgs/animal-dog-pet-dangerous.jpg" id="dog">
+	</div>
+	<div id="dog_image_2">
+	<img src="Imgs/animal-dog-pet-dangerous.jpg" id="dog2">
+	</div>
+	<div id="dog_image_3">
+	<img src="Imgs/animal-dog-pet-dangerous.jpg" id="dog3">
+	</div>
+</body>
+
+</html>
